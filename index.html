@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Neuseeland Reise - Etappe 13 (Wanaka)</title>
+    <link rel="stylesheet" href="../styles.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+    <style>
+		   #overviewMap {
+            float:right;
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+			}
+    </style>
+</head>
+<body>
+<h1>Wanaka</h1>
+
+		 <div id="overviewMap"></div>
+	<script>
+		var map = L.map('overviewMap').setView([-44.7031813, 169.1320981], 9);
+		
+		var osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png');
+		osm.addTo(map);
+		
+		var marker = L.marker([-44.7031813, 169.1320981]);
+		marker.addTo(map);
+		
+		var popup = L.popup();
+
+			function onMapClick(e) {
+				popup
+				.setLatLng(e.latlng)
+				.setContent("Wanaka")
+				.openOn(map);
+				}
+
+				map.on('click', onMapClick);
+		 
+	</script>
+
+<h2>Lake Wanaka</h2>
+
+<h3>44° 42′ S, 169° 8′ O 285m.ü.NN</h3>
+
+<p class="info">liegt 50km nordöstlich von Queenstown und am südlichen Ende des Lake Wanaka</p>
+<p class="info">war bis zum Jahr 1940 unter dem Namen Roys Bay oder Pembroke bekannt, wurde dann aber in den heutigen Namen umbenannt</p>
+<figure>
+<img src="a-z13_1.jpg">
+<figcaption>
+Blick von oben auf Wanaka
+</figcaption>
+</img>
+</figure>
+<figure>
+<img src="a-z13_2.jpg">
+<figcaption>
+Das Stadtzentrum
+</figcaption>
+</img>
+</figure>
+<h4 class="links">Quelle</h4>
+	<ul class="links">
+	<li><a href="https://de.wikipedia.org/wiki/Wanaka">Wikipedia Beitrag zu Wanaka</a></li>
+	<li><a href="https://de.wikipedia.org/wiki/Wanaka#/media/File:Wanaka,_Ardmore_Street,_Restaurants.jpg">Das Stadtzentrum</a></li>
+	<li><a href="https://de.wikipedia.org/wiki/Wanaka#/media/File:Wanaka_from_a_DC3_-_panoramio.jpg">Blick von oben auf Wanaka</a></li>
+	</ul>
+<nav>
+<a class="previous" href="../12/index.html">Voriger Ort</a>
+<span class="current">Aktueller Ort</span>
+<a class="next"href="../14/index.html">Nächster Ort</a>
+</nav>
+<a class="author" href="https://fusulierchristopher.github.io/">Christopher Fusulier</a>
+</body>
+</html>
